@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block add_head %}
+<title>2 Url Giriş Ekranı</title>
+
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+    <div class="col-lg-8 card m-5 p-5">
+        <form action="/urlKarsilastirmaVerileri" method="POST">
+            <div class="form-group">
+                 <label for="first-url">Birinci Url</label>
+                <input type="text" class="form-control" name="first-url" required>
+
+            </div>
+            <div class="form-group">
+                 <label for="second-url">Birinci Url</label>
+                <input type="text" class="form-control" name="second-url" required>
+
+            </div>
+             <button type="submit" class="btn btn-primary">Karşılaştır</button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

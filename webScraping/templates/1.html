@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block add_head %}
+<title>Url Karşılaştır</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="col-lg-8 card m-5 p-5">
+        <h1>Formdan Gelen Veriler:</h1>
+
+        {{ hata }} <br>
+
+        <strong>Birinci Url Bilgisi:</strong> {{ firstUrl }} <br><br>
+        <strong>İkinci Url Bilgisi:</strong> {{ secondUrl }} <br><br>
+
+       <h2>Birinci Url Anahtar Kelimeler</h2>
+        {% for key in aKe %}
+        <li>{{key}}</li>
+        {% endfor %}
+        <br>
+
+        <h2>İkinci Url Anahtar Kelimeler</h2>
+        {% for key in aKe2 %}
+        <li>{{key}}</li>
+        {% endfor %}
+        <br>
+
+        <h2>Aynı Anahtar Kelimeler</h2>
+        {% for key in ayni_anahtarlar %}
+        <li>{{key}}</li>
+        {% endfor %}
+
+        <br>
+
+        <strong>Frekans Çarpımı : </strong> {{frekans_carpim}} <br><br>
+        <strong>Benzerlik Skoru : </strong> {{BenzerlikSkoru}} <br><br>
+    </div>
+</div>
+{% endblock %}

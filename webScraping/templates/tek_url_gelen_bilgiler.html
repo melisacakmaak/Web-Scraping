@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block add_head %}
+<title>Url Gelen Bilgiler</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="card container col-8">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title"><strong>Url Bilgisi:</strong> {{ urlBilgisi }}</h5>
+    </div>
+
+    {{ hata }} <br>
+
+    <table class="table datatable-basic">
+        <thead>
+        <tr>
+            <th>Kelime</th>
+            <th>Sayı</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for a_Kel, a_Say in kelSayisi %}
+        <tr>
+            <td>{{ a_Kel }}</td>
+            <td>{{ a_Say }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+</div>
+{% endblock %}
